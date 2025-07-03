@@ -88,7 +88,7 @@ export function ProjectCard({
                 asChild
               >
                 <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
-                  Live Demo
+                  Ver Projeto
                   <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
