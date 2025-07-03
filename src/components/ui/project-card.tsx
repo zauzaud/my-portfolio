@@ -79,7 +79,7 @@ export function ProjectCard({
               >
                 <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
-                  Code
+                  Repositório
                 </Link>
               </Button>
               <Button
