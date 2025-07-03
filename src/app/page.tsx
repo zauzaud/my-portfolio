@@ -273,7 +273,7 @@ export default function Portfolio() {
             />
             <ProjectCard
               title="DXIA - Controle de Estoque"
-              description="Plataforma para gestão estoque de produtos e controle financeiro."
+              description="Plataforma com gestão de estoque para produtos e controle financeiro."
               tags={[
                 "TypeScript",
                 "React",
