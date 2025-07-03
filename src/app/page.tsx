@@ -230,52 +230,76 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             <ProjectCard
-              title="E-commerce Platform"
-              description="A full-stack e-commerce platform built with Next.js, Stripe, and Prisma."
-              tags={["Next.js", "TypeScript", "Prisma", "Stripe"]}
+              title="Plataforma de Gestão de Suporte - RAG"
+              description="Uma plataforma de gestão de suporte com IA RAG para melhorar a eficiência e a precisão das respostas."
+              tags={[
+                "Python",
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Banco de Dados Vetorial",
+              ]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              demoUrl=""
+              repoUrl=""
             />
             <ProjectCard
-              title="Task Management App"
-              description="A collaborative task management application with real-time updates."
-              tags={["React", "Firebase", "Tailwind CSS", "Redux"]}
+              title="Projeto Gestão Web"
+              description="Um projeto ERP de gestão para cooperativas e empresas de diversas áreas."
+              tags={[
+                "React",
+                "Next.js",
+                "Tailwind CSS",
+                "TypeScript",
+                "PostgreSQL",
+              ]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              demoUrl=""
+              repoUrl=""
             />
             <ProjectCard
-              title="AI Content Generator"
-              description="An AI-powered content generation tool using OpenAI's GPT models."
-              tags={["Next.js", "OpenAI API", "Node.js", "MongoDB"]}
+              title="TCC - Briut Solutions"
+              description="Projeto de conclusão de curso para a ESPM - plataforma de gestão de clínicas médicas."
+              tags={[
+                "Next.js",
+                "TypeScript",
+                "React",
+                "PostgreSQL",
+                "Tailwind CSS",
+              ]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              demoUrl=""
+              repoUrl=""
             />
             <ProjectCard
-              title="Fitness Tracker"
-              description="A mobile-first fitness tracking application with data visualization."
-              tags={["React Native", "TypeScript", "D3.js", "Firebase"]}
+              title="DXIA - Controle de Estoque"
+              description="Plataforma para gestão estoque de produtos e controle financeiro."
+              tags={[
+                "TypeScript",
+                "React",
+                "PostgreSQL",
+                "Tailwind CSS",
+                "Next.js",
+              ]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              demoUrl=""
+              repoUrl=""
             />
             <ProjectCard
-              title="Weather Dashboard"
-              description="A beautiful weather dashboard with forecasts and historical data."
-              tags={["React", "Weather API", "Chart.js", "Styled Components"]}
+              title="A Grande Roda"
+              description="Plataforma para gestão de clinicas psicologicas e de saúde mental - Parceria com a ESPM."
+              tags={["HTML", "CSS", "JavaScript", "MySQL"]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              demoUrl=""
+              repoUrl=""
             />
             <ProjectCard
-              title="Portfolio Website"
-              description="This portfolio website built with Next.js and Tailwind CSS."
-              tags={["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"]}
+              title="Blume Consultoria"
+              description="Site institucional completo para a Blume Consultoria, empresa de consultoria financeira."
+              tags={["Next.js", "Tailwind CSS", "TypeScript"]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl="https://example.com"
-              repoUrl="https://github.com"
+              demoUrl=""
+              repoUrl=""
             />
           </div>
         </div>
