@@ -241,7 +241,7 @@ export default function Portfolio() {
               ]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl=""
-              repoUrl=""
+              repoUrl="https://github.com/zauzaud"
             />
             <ProjectCard
               title="Projeto Gestão Web"
@@ -254,8 +254,8 @@ export default function Portfolio() {
                 "PostgreSQL",
               ]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl=""
-              repoUrl=""
+              demoUrl="https://gestao-web-next.vercel.app/"
+              repoUrl="https://github.com/zauzaud"
             />
             <ProjectCard
               title="TCC - Briut Solutions"
@@ -268,8 +268,8 @@ export default function Portfolio() {
                 "Tailwind CSS",
               ]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl=""
-              repoUrl=""
+              demoUrl="https://projeto-briut.vercel.app/"
+              repoUrl="https://github.com/zauzaud"
             />
             <ProjectCard
               title="DXIA - Controle de Estoque"
@@ -282,8 +282,8 @@ export default function Portfolio() {
                 "Next.js",
               ]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl=""
-              repoUrl=""
+              demoUrl="https://dxia.vercel.app/login"
+              repoUrl="https://github.com/zauzaud"
             />
             <ProjectCard
               title="A Grande Roda"
@@ -291,15 +291,15 @@ export default function Portfolio() {
               tags={["HTML", "CSS", "JavaScript", "MySQL"]}
               image="/placeholder.svg?height=400&width=600"
               demoUrl=""
-              repoUrl=""
+              repoUrl="https://github.com/zauzaud"
             />
             <ProjectCard
               title="Blume Consultoria"
               description="Site institucional completo para a Blume Consultoria, empresa de consultoria financeira."
               tags={["Next.js", "Tailwind CSS", "TypeScript"]}
               image="/placeholder.svg?height=400&width=600"
-              demoUrl=""
-              repoUrl=""
+              demoUrl="https://blume-website.vercel.app/home"
+              repoUrl="https://github.com/zauzaud"
             />
           </div>
         </div>
