@@ -258,7 +258,7 @@ export default function Portfolio() {
                 "JavaScript",
                 "Banco de Dados Vetorial",
               ]}
-              image="/placeholder.svg?height=400&width=600"
+              image="/technoplus.png?height=400&width=600"
               demoUrl=""
               repoUrl="https://github.com/zauzaud"
             />
@@ -272,7 +272,7 @@ export default function Portfolio() {
                 "TypeScript",
                 "PostgreSQL",
               ]}
-              image="/placeholder.svg?height=400&width=600"
+              image="/technoplus.png?height=400&width=600"
               demoUrl="https://gestao-web-next.vercel.app/"
               repoUrl="https://github.com/zauzaud"
             />

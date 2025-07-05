@@ -36,21 +36,34 @@ export function ProjectCard({
       className="group"
     >
       <div
-        className="relative h-full overflow-hidden rounded-xl bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 transition-all duration-300 group-hover:border-blue-500/50"
+        className="relative h-full overflow-hidden rounded-xl bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 transition-all duration-300 group-hover:border-blue-500/50 group-hover:shadow-2xl group-hover:shadow-blue-500/20"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/10 to-blue-800/10 rounded-xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
 
         <div className="relative h-full flex flex-col">
-          <div className="relative overflow-hidden h-48">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-600/20 to-blue-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+          <div className="relative overflow-hidden h-48 rounded-t-xl">
+            {/* Fundo gradiente escuro atrás da imagem */}
+            <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black"></div>
+
+            {/* Overlay suave para suavizar contraste - só embaixo */}
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent z-10"></div>
+
+            {/* Overlay hover */}
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-600/20 to-blue-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"></div>
+
             <img
               src={image || "/placeholder.svg"}
               alt={title}
-              className={`w-full h-full object-cover transition-transform duration-700 ${
-                isHovered ? "scale-110" : "scale-100"
+              className={`w-full h-full object-cover transition-all duration-700 mix-blend-normal ${
+                isHovered
+                  ? "scale-110 brightness-110"
+                  : "scale-100 brightness-95"
               }`}
+              style={{
+                filter: "contrast(1.1) saturate(1.2)",
+              }}
             />
           </div>
 
@@ -70,11 +83,11 @@ export function ProjectCard({
               ))}
             </div>
 
-            <div className="flex justify-between mt-auto pt-4 border-t border-zinc-700/50">
+            <div className="flex justify-between mt-auto pt-4 border-t border-zinc-700/30">
               <Button
                 variant="ghost"
                 size="sm"
-                className="text-zinc-400 hover:text-white hover:bg-zinc-700/50"
+                className="text-zinc-400 hover:text-white hover:bg-zinc-700/30 backdrop-blur-sm transition-all duration-300"
                 asChild
               >
                 <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
@@ -84,7 +97,7 @@ export function ProjectCard({
               </Button>
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-800 hover:to-blue-600 border-0"
+                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-800 hover:to-blue-600 border-0 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
                 asChild
               >
                 <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
@@ -95,12 +108,17 @@ export function ProjectCard({
             </div>
           </div>
 
-          <div className="absolute top-3 right-3 z-20">
-            <div
-              className={`w-3 h-3 rounded-full ${
-                isHovered ? "bg-green-500" : "bg-zinc-500"
-              } transition-colors duration-300`}
-            ></div>
+          <div className="absolute top-3 right-3 z-40">
+            <div className="relative">
+              <div
+                className={`w-3 h-3 rounded-full ${
+                  isHovered ? "bg-blue-500" : "bg-zinc-500"
+                } transition-all duration-300`}
+              ></div>
+              {isHovered && (
+                <div className="absolute inset-0 w-3 h-3 rounded-full bg-blue-500 animate-ping"></div>
+              )}
+            </div>
           </div>
         </div>
       </div>
