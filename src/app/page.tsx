@@ -250,7 +250,7 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
             <ProjectCard
               title="Plataforma de Gestão de Suporte - RAG"
-              description="Uma plataforma de gestão de suporte com IA RAG para melhorar a eficiência e a precisão das respostas."
+              description="Plataforma de gestão de suporte com RAG para melhorar a eficiência e a precisão das respostas do time de suporte."
               tags={[
                 "Python",
                 "HTML",
