@@ -12,18 +12,18 @@ interface ProjectCardProps {
   title: string;
   description: string;
   tags: string[];
-  image: string;
   demoUrl: string;
   repoUrl: string;
+  gradient?: string;
 }
 
 export function ProjectCard({
   title,
   description,
   tags,
-  image,
   demoUrl,
   repoUrl,
+  gradient,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -44,27 +44,30 @@ export function ProjectCard({
 
         <div className="relative h-full flex flex-col">
           <div className="relative overflow-hidden h-48 rounded-t-xl">
-            {/* Fundo gradiente escuro atrás da imagem */}
-            <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black"></div>
+            {/* Gradiente temático personalizado */}
+            <div
+              className={`absolute inset-0 ${
+                gradient ||
+                "bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"
+              } transition-all duration-700 ${
+                isHovered ? "scale-110" : "scale-100"
+              }`}
+            ></div>
 
             {/* Overlay suave para suavizar contraste - só embaixo */}
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10"></div>
 
             {/* Overlay hover */}
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-600/20 to-blue-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"></div>
 
-            <img
-              src={image || "/placeholder.svg"}
-              alt={title}
-              className={`w-full h-full object-cover transition-all duration-700 mix-blend-normal ${
-                isHovered
-                  ? "scale-110 brightness-110"
-                  : "scale-100 brightness-95"
-              }`}
+            {/* Padrão geométrico sutil */}
+            <div
+              className="absolute inset-0 opacity-10 z-5"
               style={{
-                filter: "contrast(1.1) saturate(1.2)",
+                backgroundImage: `radial-gradient(circle at 25% 25%, white 2px, transparent 2px), radial-gradient(circle at 75% 75%, white 2px, transparent 2px)`,
+                backgroundSize: "50px 50px",
               }}
-            />
+            ></div>
           </div>
 
           <div className="p-6 flex-grow">

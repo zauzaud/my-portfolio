@@ -258,7 +258,7 @@ export default function Portfolio() {
                 "JavaScript",
                 "Banco de Dados Vetorial",
               ]}
-              image="/technoplus.png?height=400&width=600"
+              gradient="bg-gradient-to-br from-blue-700 via-slate-800 to-zinc-900"
               demoUrl=""
               repoUrl="https://github.com/zauzaud"
             />
@@ -272,7 +272,7 @@ export default function Portfolio() {
                 "TypeScript",
                 "PostgreSQL",
               ]}
-              image="/technoplus.png?height=400&width=600"
+              gradient="bg-gradient-to-br from-indigo-700 via-blue-800 to-slate-900"
               demoUrl="https://gestao-web-next.vercel.app/"
               repoUrl="https://github.com/zauzaud"
             />
@@ -286,7 +286,7 @@ export default function Portfolio() {
                 "PostgreSQL",
                 "Tailwind CSS",
               ]}
-              image="/briut.png?height=400&width=400"
+              gradient="bg-gradient-to-br from-slate-700 via-zinc-800 to-gray-900"
               demoUrl="https://projeto-briut.vercel.app/"
               repoUrl="https://github.com/zauzaud"
             />
@@ -300,7 +300,7 @@ export default function Portfolio() {
                 "Tailwind CSS",
                 "Next.js",
               ]}
-              image="/dxia.png?height=400&width=600"
+              gradient="bg-gradient-to-br from-blue-800 via-indigo-900 to-zinc-900"
               demoUrl="https://dxia.vercel.app/login"
               repoUrl="https://github.com/zauzaud"
             />
@@ -308,7 +308,7 @@ export default function Portfolio() {
               title="A Grande Roda"
               description="Plataforma para gestão de clinicas psicologicas e de saúde mental - Parceria com a ESPM."
               tags={["HTML", "CSS", "JavaScript", "MySQL", "SCSS"]}
-              image="/grande.png?height=400&width=600"
+              gradient="bg-gradient-to-br from-slate-600 via-slate-800 to-zinc-900"
               demoUrl=""
               repoUrl="https://github.com/tech-espm/labs-a-grande-roda"
             />
@@ -322,7 +322,7 @@ export default function Portfolio() {
                 "React",
                 "PostgreSQL",
               ]}
-              image="/blume.png?height=400&width=600"
+              gradient="bg-gradient-to-br from-gray-700 via-slate-800 to-neutral-900"
               demoUrl="https://blume-website.vercel.app/home"
               repoUrl="https://github.com/zauzaud"
             />

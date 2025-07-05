@@ -16,7 +16,7 @@ const experiences = [
     company: "Technoplus",
     period: "Ago 2024 - Dez 2024",
     description:
-      "Desenvolvi aplicações web Full Stack utilizando tecnologias modernas. Foco em React, Next.js, Node.js, e integração com APIs RESTful. Responsável por criar experiências digitais performáticas e intuitivas.",
+      "Desenvolvi e dei manutenção em aplicações web Full Stack utilizando tecnologias modernas. Foco em React, Next.js, Node.js, TypeScript e integração com APIs RESTful. Criei e implementei soluções que melhoraram significativamente a performance e usabilidade das aplicações.",
   },
   {
     title: "Estagiário de TI",
