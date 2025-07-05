@@ -307,7 +307,7 @@ export default function Portfolio() {
             <ProjectCard
               title="A Grande Roda"
               description="Plataforma para gestão de clinicas psicologicas e de saúde mental - Parceria com a ESPM."
-              tags={["HTML", "CSS", "JavaScript", "MySQL"]}
+              tags={["HTML", "CSS", "JavaScript", "MySQL", "SCSS"]}
               image="/grande.png?height=400&width=600"
               demoUrl=""
               repoUrl="https://github.com/tech-espm/labs-a-grande-roda"
@@ -315,7 +315,13 @@ export default function Portfolio() {
             <ProjectCard
               title="Blume Consultoria"
               description="Site institucional completo para a Blume Consultoria, empresa de consultoria financeira."
-              tags={["Next.js", "Tailwind CSS", "TypeScript"]}
+              tags={[
+                "Next.js",
+                "Tailwind CSS",
+                "TypeScript",
+                "React",
+                "PostgreSQL",
+              ]}
               image="/blume.png?height=400&width=600"
               demoUrl="https://blume-website.vercel.app/home"
               repoUrl="https://github.com/zauzaud"
