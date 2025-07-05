@@ -131,7 +131,7 @@ export default function Portfolio() {
         <div className="container relative z-10">
           <SectionHeading
             title="Sobre Mim"
-            subtitle="Minha jornada e experiências"
+            subtitle="Minha jornada e formação acadêmica"
           />
 
           <div className="max-w-4xl mx-auto mt-18">
