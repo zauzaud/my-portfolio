@@ -7,30 +7,30 @@ const experiences = [
   {
     title: "Gerente de Projeto & Full Stack Developer",
     company: "Technoplus",
-    period: "2025 - Presente",
+    period: "Jan 2025 - Presente",
     description:
-      "Lidero projetos de desenvolvimento web, coordeno equipes e desenvolvo soluções Full Stack com React, Next.js, Node.js e TypeScript.",
+      "Lidero equipes no desenvolvimento de projetos web, coordenando todas as etapas do ciclo de vida do software. Desenvolvo arquiteturas Full Stack utilizando principalmente React, Next.js, Node.js e TypeScript. Implemento soluções de IA para automação e otimização de processos.",
   },
   {
     title: "Full Stack Developer",
     company: "Technoplus",
-    period: "Ago 2024 - Presente",
+    period: "Ago 2024 - Dez 2024",
     description:
-      "Desenvolvimento de aplicações web Full Stack utilizando tecnologias modernas. Foco em React, Next.js, Node.js, e integração com APIs. Responsável por criar experiências digitais performáticas e intuitivas.",
+      "Desenvolvi aplicações web Full Stack utilizando tecnologias modernas. Foco em React, Next.js, Node.js, e integração com APIs RESTful. Responsável por criar experiências digitais performáticas e intuitivas.",
   },
   {
     title: "Estagiário de TI",
     company: "Technoplus",
     period: "Mai 2024 - Ago 2024",
     description:
-      "Início da carreira em tecnologia fornecendo suporte ao cliente e desenvolvimento web. Trabalhei com instrumentos financeiros, suporte técnico e desenvolvimento de soluções para otimizar processos.",
+      "Iniciei minha transição para a área de tecnologia, prestando suporte técnico ao cliente e participando de projetos de desenvolvimento web. Trabalhei com sistemas de instrumentos financeiros, contribuindo para soluções que otimizaram processos internos e melhoraram a experiência do usuário.",
   },
   {
     title: "Experiência em Direito",
     company: "Área Jurídica",
     period: "2017 - 2020",
     description:
-      "3 anos de experiência na área jurídica durante a graduação em Direito. Desenvolvi habilidades analíticas, comunicação, resolução de problemas complexos e gestão de casos que hoje aplico no desenvolvimento de software.",
+      "Atuei por 3 anos na área jurídica durante graduação em Direito, desenvolvendo competências analíticas, comunicação eficaz e resolução de problemas complexos. Gerenciei casos jurídicos aplicando pensamento estruturado e atenção aos detalhes - habilidades que hoje utilizo no desenvolvimento de software e gestão de projetos.",
   },
 ];
 

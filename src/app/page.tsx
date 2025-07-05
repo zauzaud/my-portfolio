@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ui/project-card";
@@ -49,19 +49,23 @@ export default function Portfolio() {
               criatividade e uma paixão pela inovação.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button className="relative overflow-hidden group bg-gradient-to-r from-blue-600 to-blue-800 border-0">
-                <span className="relative z-10 flex items-center">
-                  Ver Projetos{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-              </Button>
-              <Button
-                variant="outline"
-                className="border-zinc-700 text-zinc-300 hover:text-white hover:border-zinc-500 bg-transparent"
-              >
-                Contato
-              </Button>
+              <Link href="#projects">
+                <Button className="relative overflow-hidden group bg-gradient-to-r from-blue-600 to-blue-800 border-0">
+                  <span className="relative z-10 flex items-center">
+                    Ver Projetos{" "}
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                </Button>
+              </Link>
+              <Link href="#contact">
+                <Button
+                  variant="outline"
+                  className="border-zinc-700 text-zinc-300 hover:text-white hover:border-zinc-500 bg-transparent"
+                >
+                  Contato
+                </Button>
+              </Link>
             </div>
             <div className="flex gap-4 pt-4">
               <Link
@@ -130,7 +134,7 @@ export default function Portfolio() {
             subtitle="Minha jornada e experiências"
           />
 
-          <div className="max-w-4xl mx-auto mt-16">
+          <div className="max-w-4xl mx-auto mt-18">
             <GlassmorphicCard>
               <p className="text-lg text-zinc-300">
                 Sou um desenvolvedor de software especializado em criar
@@ -156,11 +160,32 @@ export default function Portfolio() {
                     <div className="font-medium">Gabriel Ramos Zaude</div>
                   </div>
                   <div className="space-y-1">
-                    <div className="text-sm text-zinc-500">Email</div>
-                    <div className="font-medium">gabriel.zaude@gmail.com</div>
+                    <div className="text-sm text-zinc-500">Formação</div>
+                    <div className="font-medium">
+                      <div className="mb-1">Sistemas de Informação</div>
+                      <div className="text-sm text-zinc-500">
+                        ESPM - São Paulo - Graduação
+                      </div>
+                      <div className="text-sm text-green-500 font-medium">
+                        Concluída
+                      </div>
+                    </div>
+                    <div className="font-medium mt-2">
+                      <div className="mb-1">Engenharia de Software</div>
+                      <div className="text-sm text-zinc-500">
+                        PUCRIO - Rio de Janeiro - Pós Graduação
+                      </div>
+                      <div className="text-sm text-yellow-500 font-medium">
+                        Em Andamento
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="space-y-3">
+                  <div className="space-y-1">
+                    <div className="text-sm text-zinc-500">Email</div>
+                    <div className="font-medium">gabriel.zaude@gmail.com</div>
+                  </div>
                   <div className="space-y-1">
                     <div className="text-sm text-zinc-500">Localização</div>
                     <div className="font-medium">São Paulo, Brasil</div>
@@ -261,7 +286,7 @@ export default function Portfolio() {
                 "PostgreSQL",
                 "Tailwind CSS",
               ]}
-              image="/briut.png?height=400&width=600"
+              image="/briut.png?height=400&width=400"
               demoUrl="https://projeto-briut.vercel.app/"
               repoUrl="https://github.com/zauzaud"
             />
@@ -337,6 +362,15 @@ export default function Portfolio() {
                 Informações de Contato
               </h3>
               <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
+                    <Phone className="h-5 w-5 text-blue-400" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-zinc-500">Telefone</div>
+                    <div className="font-medium">(11) 93070-1998</div>
+                  </div>
+                </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
                     <Mail className="h-5 w-5 text-blue-400" />
