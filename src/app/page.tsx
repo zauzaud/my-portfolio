@@ -174,12 +174,6 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-
-              <div className="mt-8">
-                <Button className="bg-zinc-800 hover:bg-zinc-700 text-white">
-                  Download Currículo
-                </Button>
-              </div>
             </GlassmorphicCard>
           </div>
         </div>
@@ -267,7 +261,7 @@ export default function Portfolio() {
                 "PostgreSQL",
                 "Tailwind CSS",
               ]}
-              image="/placeholder.svg?height=400&width=600"
+              image="/briut.png?height=400&width=600"
               demoUrl="https://projeto-briut.vercel.app/"
               repoUrl="https://github.com/zauzaud"
             />
@@ -281,7 +275,7 @@ export default function Portfolio() {
                 "Tailwind CSS",
                 "Next.js",
               ]}
-              image="/placeholder.svg?height=400&width=600"
+              image="/dxia.png?height=400&width=600"
               demoUrl="https://dxia.vercel.app/login"
               repoUrl="https://github.com/zauzaud"
             />
@@ -289,15 +283,15 @@ export default function Portfolio() {
               title="A Grande Roda"
               description="Plataforma para gestão de clinicas psicologicas e de saúde mental - Parceria com a ESPM."
               tags={["HTML", "CSS", "JavaScript", "MySQL"]}
-              image="/placeholder.svg?height=400&width=600"
+              image="/grande.png?height=400&width=600"
               demoUrl=""
-              repoUrl="https://github.com/zauzaud"
+              repoUrl="https://github.com/tech-espm/labs-a-grande-roda"
             />
             <ProjectCard
               title="Blume Consultoria"
               description="Site institucional completo para a Blume Consultoria, empresa de consultoria financeira."
               tags={["Next.js", "Tailwind CSS", "TypeScript"]}
-              image="/placeholder.svg?height=400&width=600"
+              image="/blume.png?height=400&width=600"
               demoUrl="https://blume-website.vercel.app/home"
               repoUrl="https://github.com/zauzaud"
             />
