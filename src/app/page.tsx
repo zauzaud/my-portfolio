@@ -374,7 +374,14 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <div className="text-sm text-zinc-500">Telefone</div>
-                    <div className="font-medium">(11) 93070-1998</div>
+                    <Link
+                      href="https://wa.me/5511930701998?text=Olá Gabriel! Vi seu portfólio e gostaria de conversar sobre uma oportunidade."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium hover:text-blue-400 transition-colors no-underline"
+                    >
+                      (11) 93070-1998
+                    </Link>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -383,7 +390,12 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <div className="text-sm text-zinc-500">Email</div>
-                    <div className="font-medium">gabriel.zaude@gmail.com</div>
+                    <Link
+                      href="mailto:gabriel.zaude@gmail.com"
+                      className="font-medium hover:text-blue-400 transition-colors no-underline"
+                    >
+                      gabriel.zaude@gmail.com
+                    </Link>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -392,9 +404,14 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <div className="text-sm text-zinc-500">LinkedIn</div>
-                    <div className="font-medium">
+                    <Link
+                      href="https://www.linkedin.com/in/gabriel-ramos-8558b6193/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium hover:text-blue-400 transition-colors no-underline"
+                    >
                       linkedin.com/in/gabriel-ramos-8558b6193/
-                    </div>
+                    </Link>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -403,7 +420,14 @@ export default function Portfolio() {
                   </div>
                   <div>
                     <div className="text-sm text-zinc-500">GitHub</div>
-                    <div className="font-medium">github.com/zauzaud</div>
+                    <Link
+                      href="https://github.com/zauzaud"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium hover:text-blue-400 transition-colors no-underline"
+                    >
+                      github.com/zauzaud
+                    </Link>
                   </div>
                 </div>
               </div>

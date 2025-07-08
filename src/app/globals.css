@@ -58,6 +58,15 @@
 }
 
 @layer components {
+  .no-underline {
+    text-decoration: none !important;
+  }
+  .no-underline:hover {
+    text-decoration: none !important;
+  }
+}
+
+@layer components {
   .container {
     @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
