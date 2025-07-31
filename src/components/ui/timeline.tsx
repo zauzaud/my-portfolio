@@ -5,14 +5,14 @@ import { useMobile } from "@/hooks/use-mobile";
 
 const experiences = [
   {
-    title: "Gerente de Projeto & Full Stack Developer",
+    title: "Full Stack Developer Pleno",
     company: "Technoplus",
     period: "Jan 2025 - Presente",
     description:
-      "Lidero equipes no desenvolvimento de projetos web, coordenando todas as etapas do ciclo de vida do software. Desenvolvo arquiteturas Full Stack utilizando principalmente React, Next.js, Node.js e TypeScript. Implemento soluções de IA para automação e otimização de processos.",
+      "Lidero equipes no desenvolvimento de projetos web, coordenando etapas do ciclo de vida do software. Desenvolvo arquiteturas Full Stack utilizando principalmente React, Next.js, Node.js e TypeScript. Implemento soluções de IA para automação e otimização de processos.",
   },
   {
-    title: "Full Stack Developer",
+    title: "Full Stack Developer Junior",
     company: "Technoplus",
     period: "Ago 2024 - Dez 2024",
     description:
