@@ -14,14 +14,14 @@ const experiences = [
   {
     title: "Full Stack Developer Junior",
     company: "Technoplus",
-    period: "Ago 2024 - Dez 2024",
+    period: "Jul 2024 - Jan 2025",
     description:
       "Desenvolvi e dei manutenção em aplicações web Full Stack utilizando tecnologias modernas. Foco em React, Next.js, Node.js, TypeScript e integração com APIs RESTful. Criei e implementei soluções que melhoraram significativamente a performance e usabilidade das aplicações.",
   },
   {
     title: "Estagiário de TI",
     company: "Technoplus",
-    period: "Mai 2024 - Ago 2024",
+    period: "Mai 2024 - Jul 2024",
     description:
       "Iniciei minha transição para a área de tecnologia, prestando suporte técnico ao cliente e participando de projetos de desenvolvimento web. Trabalhei com sistemas de instrumentos financeiros, contribuindo para soluções que otimizaram processos internos e melhoraram a experiência do usuário.",
   },
