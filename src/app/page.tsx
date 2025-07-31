@@ -259,7 +259,7 @@ export default function Portfolio() {
                 "Banco de Dados Vetorial",
               ]}
               gradient="bg-gradient-to-br from-blue-700 via-slate-800 to-zinc-900"
-              demoUrl=""
+              demoUrl="https://gestao-suporte.vercel.app/login"
               repoUrl="https://github.com/zauzaud"
             />
             <ProjectCard
