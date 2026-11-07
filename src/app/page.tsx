@@ -1,509 +1,168 @@
-import Link from "next/link";
-import { ArrowRight, Github, Linkedin, Mail, Phone } from "lucide-react";
+import { CopyEmail } from "@/components/copy-email";
+import { SectionNav } from "@/components/section-nav";
 
-import { Button } from "@/components/ui/button";
-import { ProjectCard } from "@/components/ui/project-card";
-import { SkillBadge } from "@/components/ui/skill-badge";
-import { Timeline } from "@/components/ui/timeline";
-import { ContactForm } from "@/components/ui/contact-form";
-import { CreativeHero } from "@/components/ui/creative-hero";
-import { FloatingNav } from "@/components/ui/floating-nav";
-import { MouseFollower } from "@/components/ui/mouse-follower";
-import { ScrollProgress } from "@/components/ui/scroll-progress";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { GlassmorphicCard } from "@/components/ui/glassmorphic-card";
+const EMAIL = "gabriel.zaude@gmail.com";
+const LINKEDIN = "https://www.linkedin.com/in/gabriel-ramos-8558b6193/";
+const GITHUB = "https://github.com/zauzaud";
+const WHATSAPP = "https://wa.me/5511930701998";
 
-export default function Portfolio() {
+const iconProps = {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.8,
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+  "aria-hidden": true,
+};
+
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-900 via-zinc-900 to-black text-white overflow-hidden">
-      <MouseFollower />
-      <ScrollProgress />
-      <FloatingNav />
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-blue-800 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+    <div className="shell">
+      <header className="side">
+        <div>
+          <h1>Gabriel Ramos Zaude</h1>
+          <p className="role">Tech Lead na Technoplus</p>
+          <p className="pitch">
+            Lidero um time que mantém vários produtos em produção ao mesmo tempo, sem largar o código.
+          </p>
+          <SectionNav />
         </div>
+        <div className="reach">
+          <span className="status">
+            <span className="dot" aria-hidden="true" />
+            Disponível para projetos freelance
+          </span>
+          <div className="icons">
+            <a href={GITHUB} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg {...iconProps}>
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+            <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg {...iconProps}>
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg {...iconProps}>
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </a>
+            <a href={`mailto:${EMAIL}`} aria-label="E-mail">
+              <svg {...iconProps}>
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
 
-        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-block">
-              <div className="relative px-3 py-1 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-4">
-                <span className="relative z-10">
-                  Software Engineer & Creative Developer
-                </span>
-                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/20 to-blue-800/20 animate-pulse"></span>
-              </div>
+      <main className="main">
+        <section className="sec about" id="sobre" aria-labelledby="t-sobre">
+          <h2 className="label" id="t-sobre">Sobre</h2>
+          <p>
+            Sou <strong>Tech Lead na Technoplus</strong>, em São Paulo. Cuido de um time multidisciplinar, com devs,
+            análise funcional e marketing, que mantém vários produtos rodando para clientes ao mesmo tempo.
+          </p>
+          <p>
+            No dia a dia, <strong>organizo as prioridades, desenho o processo do time e reviso o que vai para
+            produção</strong>. Também trouxe IA para o fluxo de trabalho, onde ela poupa tempo de verdade. E sigo
+            programando, principalmente em arquitetura e nas partes mais críticas dos sistemas.
+          </p>
+          <p>Fora da Technoplus, desenvolvo sistemas e sites para clientes, do levantamento ao deploy.</p>
+        </section>
+
+        <section className="sec" id="experiencia" aria-labelledby="t-experiencia">
+          <h2 className="label" id="t-experiencia">Experiência</h2>
+          <article className="job">
+            <div className="when">2024 — hoje</div>
+            <div>
+              <h3>Tech Lead · Technoplus</h3>
+              <p className="path">Entrei como estagiário e cheguei à liderança passando por júnior e pleno.</p>
+              <ul className="points">
+                <li>Lidero o time de desenvolvimento e defino prioridades junto com a gestão, com vários produtos em paralelo.</li>
+                <li>Conduzo a modernização do sistema principal da empresa: um ERP desktop legado sendo reescrito para a web.</li>
+                <li>Cuido também de produtos de assinatura eletrônica de documentos e de integrações fiscais com o governo.</li>
+                <li>Desenhei o processo do time: formato de tarefa, revisão de código, CI e deploy contínuo.</li>
+                <li>
+                  Levei IA para o dia a dia: revisão de código assistida em todos os repositórios, agentes que transformam
+                  erros de produção em tarefas e um assistente de suporte que consulta a base de conhecimento.
+                </li>
+              </ul>
+              <ul className="tags" aria-label="Áreas">
+                <li>Liderança técnica</li>
+                <li>Arquitetura</li>
+                <li>Modernização de legado</li>
+                <li>Processo</li>
+                <li>IA aplicada</li>
+                <li>CI/CD</li>
+                <li>Observabilidade</li>
+              </ul>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              <span className="block">Olá, eu sou</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
-                Gabriel Zaude
-              </span>
-            </h1>
-            <p className="text-xl text-zinc-400 max-w-[600px]">
-              Desenvolvo experiências digitais excepcionais com código,
-              criatividade e uma paixão pela inovação.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Link href="#projects">
-                <Button className="relative overflow-hidden group bg-gradient-to-r from-blue-600 to-blue-800 border-0">
-                  <span className="relative z-10 flex items-center">
-                    Ver Projetos{" "}
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                </Button>
-              </Link>
-              <Link href="#contact">
-                <Button
-                  variant="outline"
-                  className="border-zinc-700 text-zinc-300 hover:text-white hover:border-zinc-500 bg-transparent"
-                >
-                  Contato
-                </Button>
-              </Link>
+          </article>
+
+          <article className="job">
+            <div className="when">Paralelo</div>
+            <div>
+              <h3>Freelance</h3>
+              <p className="path">Projetos para empresas e profissionais, do levantamento ao deploy.</p>
+              <ul className="points">
+                <li>Criação de sites institucionais.</li>
+                <li>Sistemas sob medida para gestão: estoque, financeiro e operação.</li>
+                <li>Produtos SaaS com atendimento automatizado por IA.</li>
+              </ul>
+              <ul className="tags" aria-label="Áreas">
+                <li>Sites</li>
+                <li>Sistemas web</li>
+                <li>SaaS</li>
+                <li>Automação com IA</li>
+              </ul>
             </div>
-            <div className="flex gap-4 pt-4">
-              <Link
-                href="https://github.com/zauzaud"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-                >
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/gabriel-ramos-8558b6193/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-                >
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
+          </article>
+        </section>
 
-              <Link href="mailto:gabriel.zaude@gmail.com">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-                >
-                  <Mail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </Button>
-              </Link>
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <CreativeHero />
-          </div>
-        </div>
-
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center items-start p-1">
-            <div className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-32 relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-64 h-64 bg-blue-800 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-        </div>
-
-        <div className="container relative z-10">
-          <SectionHeading
-            title="Sobre Mim"
-            subtitle="Minha jornada e formação acadêmica"
-          />
-
-          <div className="max-w-4xl mx-auto mt-18">
-            <GlassmorphicCard>
-              <p className="text-lg text-zinc-300">
-                Sou um desenvolvedor de software especializado em criar
-                experiências digitais excepcionais. Minha especialidade é o
-                desenvolvimento Full Stack com React, TypeScript e Next.js.
-              </p>
-              <p className="text-lg text-zinc-300 mt-4">
-                Minha jornada na tecnologia começou com uma forte base em
-                desenvolvimento de software pela ESPM. Trabalhei com diversas
-                empresas e clientes para criar experiências digitais intuitivas,
-                performáticas e acessíveis.
-              </p>
-              <p className="text-lg text-zinc-300 mt-4">
-                Quando não estou programando, você pode me encontrar explorando
-                novas tecnologias, contribuindo com projetos open-source e me
-                mantendo atualizado com as últimas tendências da indústria.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                <div className="space-y-3">
-                  <div className="space-y-1">
-                    <div className="text-sm text-zinc-500">Nome</div>
-                    <div className="font-medium">Gabriel Ramos Zaude</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-sm text-zinc-500">Formação</div>
-                    <div className="font-medium">
-                      <div className="mb-1">Sistemas de Informação</div>
-                      <div className="text-sm text-zinc-500">
-                        ESPM - São Paulo - Graduação
-                      </div>
-                      <div className="text-sm text-green-500 font-medium">
-                        Concluída
-                      </div>
-                    </div>
-                    <div className="font-medium mt-2">
-                      <div className="mb-1">Engenharia de Software</div>
-                      <div className="text-sm text-zinc-500">
-                        PUCRIO - Rio de Janeiro - Pós Graduação
-                      </div>
-                      <div className="text-sm text-yellow-500 font-medium">
-                        Em Andamento
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="space-y-1">
-                    <div className="text-sm text-zinc-500">Email</div>
-                    <div className="font-medium">gabriel.zaude@gmail.com</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-sm text-zinc-500">Localização</div>
-                    <div className="font-medium">São Paulo, Brasil</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-sm text-zinc-500">Disponibilidade</div>
-                    <div className="font-medium text-green-500 flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
-                      Disponível para trabalho freelance e full-time
-                    </div>
-                  </div>
-                </div>
+        <section className="sec" id="formacao" aria-labelledby="t-formacao">
+          <h2 className="label" id="t-formacao">Formação</h2>
+          <ul className="edu">
+            <li>
+              <div className="when">Pós</div>
+              <div>
+                <h3>Engenharia de Software</h3>
+                <p>PUC-Rio · EAD</p>
               </div>
-            </GlassmorphicCard>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="py-32 relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-        </div>
-
-        <div className="container relative z-10">
-          <SectionHeading
-            title="Minhas Habilidades"
-            subtitle="Tecnologias que trabalho"
-          />
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
-            <SkillBadge name="JavaScript" />
-            <SkillBadge name="TypeScript" />
-            <SkillBadge name="React" />
-            <SkillBadge name="Next.js" />
-            <SkillBadge name="Node.js" />
-            <SkillBadge name="HTML/CSS" />
-            <SkillBadge name="Tailwind CSS" />
-            <SkillBadge name="Python" />
-            <SkillBadge name="PostgreSQL" />
-            <SkillBadge name="AWS" />
-            <SkillBadge name="Docker" />
-            <SkillBadge name="Git" />
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-32 relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 left-1/3 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-yellow-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-        </div>
-
-        <div className="container relative z-10">
-          <SectionHeading
-            title="Projetos"
-            subtitle="Alguns dos meus trabalhos recentes"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            <ProjectCard
-              title="Plataforma de Gestão de Suporte - RAG"
-              description="Plataforma de gestão de suporte com RAG para melhorar a eficiência e a precisão das respostas do time de suporte."
-              tags={[
-                "Python",
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Banco de Dados Vetorial",
-              ]}
-              gradient="bg-gradient-to-br from-blue-700 via-slate-800 to-zinc-900"
-              demoUrl="https://gestao-suporte.vercel.app/login"
-              repoUrl="https://github.com/zauzaud"
-            />
-            <ProjectCard
-              title="Projeto Gestão Web"
-              description="Um projeto ERP de gestão para cooperativas e empresas de diversas áreas."
-              tags={[
-                "React",
-                "Next.js",
-                "Tailwind CSS",
-                "TypeScript",
-                "PostgreSQL",
-              ]}
-              gradient="bg-gradient-to-br from-indigo-700 via-blue-800 to-slate-900"
-              demoUrl="https://gestao-web-next.vercel.app/"
-              repoUrl="https://github.com/zauzaud"
-            />
-            <ProjectCard
-              title="TCC - Briut Solutions"
-              description="Projeto de conclusão de curso para a ESPM - plataforma de gestão de clínicas médicas."
-              tags={[
-                "Next.js",
-                "TypeScript",
-                "React",
-                "PostgreSQL",
-                "Tailwind CSS",
-              ]}
-              gradient="bg-gradient-to-br from-slate-700 via-zinc-800 to-gray-900"
-              demoUrl="https://projeto-briut.vercel.app/"
-              repoUrl="https://github.com/zauzaud"
-            />
-            <ProjectCard
-              title="DXIA - Controle de Estoque"
-              description="Plataforma com gestão de estoque para produtos e controle financeiro."
-              tags={[
-                "TypeScript",
-                "React",
-                "PostgreSQL",
-                "Tailwind CSS",
-                "Next.js",
-              ]}
-              gradient="bg-gradient-to-br from-blue-800 via-indigo-900 to-zinc-900"
-              demoUrl="https://dxia.vercel.app/login"
-              repoUrl="https://github.com/zauzaud"
-            />
-            <ProjectCard
-              title="A Grande Roda"
-              description="Plataforma para gestão de clinicas psicologicas e de saúde mental - Parceria com a ESPM."
-              tags={["HTML", "CSS", "JavaScript", "MySQL", "SCSS"]}
-              gradient="bg-gradient-to-br from-slate-600 via-slate-800 to-zinc-900"
-              demoUrl=""
-              repoUrl="https://github.com/tech-espm/labs-a-grande-roda"
-            />
-            <ProjectCard
-              title="Blume Consultoria"
-              description="Site institucional completo para a Blume Consultoria, empresa de consultoria financeira."
-              tags={[
-                "Next.js",
-                "Tailwind CSS",
-                "TypeScript",
-                "React",
-                "PostgreSQL",
-              ]}
-              gradient="bg-gradient-to-br from-gray-700 via-slate-800 to-neutral-900"
-              demoUrl="https://blume-website.vercel.app/home"
-              repoUrl="https://github.com/zauzaud"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="py-32 relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-        </div>
-
-        <div className="container relative z-10">
-          <SectionHeading
-            title="Experiência Profissional"
-            subtitle="Minha jornada profissional"
-          />
-
-          <div className="mt-16">
-            <Timeline />
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-32 relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
-        </div>
-
-        <div className="container relative z-10">
-          <SectionHeading
-            title="Entre em Contato"
-            subtitle="Vamos trabalhar juntos"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch mt-16">
-            <GlassmorphicCard>
-              <h3 className="text-2xl font-bold mb-6">
-                Informações de Contato
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-blue-400" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-zinc-500">Telefone</div>
-                    <Link
-                      href="https://wa.me/5511930701998?text=Olá Gabriel! Vi seu portfólio e gostaria de conversar sobre uma oportunidade."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium hover:text-blue-400 transition-colors no-underline"
-                    >
-                      (11) 93070-1998
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-blue-400" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-zinc-500">Email</div>
-                    <Link
-                      href="mailto:gabriel.zaude@gmail.com"
-                      className="font-medium hover:text-blue-400 transition-colors no-underline"
-                    >
-                      gabriel.zaude@gmail.com
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
-                    <Linkedin className="h-5 w-5 text-blue-400" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-zinc-500">LinkedIn</div>
-                    <Link
-                      href="https://www.linkedin.com/in/gabriel-ramos-8558b6193/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium hover:text-blue-400 transition-colors no-underline"
-                    >
-                      linkedin.com/in/gabriel-ramos-8558b6193/
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center">
-                    <Github className="h-5 w-5 text-blue-400" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-zinc-500">GitHub</div>
-                    <Link
-                      href="https://github.com/zauzaud"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium hover:text-blue-400 transition-colors no-underline"
-                    >
-                      github.com/zauzaud
-                    </Link>
-                  </div>
-                </div>
+            </li>
+            <li>
+              <div className="when">Graduação</div>
+              <div>
+                <h3>Sistemas de Informação</h3>
+                <p>ESPM, São Paulo</p>
               </div>
+            </li>
+          </ul>
+        </section>
 
-              <div className="mt-8 pt-8 border-t border-zinc-800">
-                <h4 className="text-lg font-medium mb-4">Status Atual</h4>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
-                  <span>Disponível para trabalho freelance e full-time</span>
-                </div>
-              </div>
-            </GlassmorphicCard>
-
-            <ContactForm />
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-zinc-800 py-12">
-        <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
-          <div>
-            <Link href="/" className="font-bold text-xl">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
-                Gabriel
-              </span>
-              <span className="text-white">Zaude</span>
-            </Link>
-            <p className="text-sm text-zinc-500 mt-2">
-              © {new Date().getFullYear()} Gabriel Zaude. Todos os direitos
-              reservados.
-            </p>
-          </div>
-          <div className="flex gap-4">
-            <Link
-              href="https://github.com/zauzaud"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Button>
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/gabriel-ramos-8558b6193/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Button>
-            </Link>
-
-            <Link href="mailto:gabriel.zaude@gmail.com">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-full bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400 hover:text-white"
-              >
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </footer>
+        <section className="sec contact" id="contato" aria-labelledby="t-contato">
+          <h2 id="t-contato">Vamos conversar</h2>
+          <p>Para projetos freelance, consultoria técnica ou só trocar ideia sobre times e engenharia.</p>
+          <CopyEmail email={EMAIL} />
+          <p className="alt">
+            Ou pelo{" "}
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>{" "}
+            e pelo{" "}
+            <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            .
+          </p>
+          <p className="foot">© {new Date().getFullYear()} Gabriel Ramos Zaude</p>
+        </section>
+      </main>
     </div>
   );
 }
